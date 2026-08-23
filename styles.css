@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+  --paper:#f4f0e8;
+  --ink:#1f2521;
+  --muted:#6d716c;
+  --stone:#d9d0c1;
+  --accent:#7c806d;
+  --white:#fffdf8;
+  --serif:"Playfair Display", Georgia, serif;
+  --sans:"DM Sans", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+.hero{height:100svh;min-height:680px;position:relative;overflow:hidden;background:#222}
+.hero__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:saturate(.78)}
+.hero__veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,18,15,.08),rgba(15,18,15,.58))}
+.hero__content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(28px,5vw,64px);color:#fffdf8}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;margin:0 0 24px}
+.hero h1{font-family:var(--serif);font-size:clamp(4rem,12vw,10rem);font-weight:400;line-height:.92;letter-spacing:-.05em;margin:0 0 26px}
+.hero h1 span{font-style:italic;font-size:.65em}
+.hero__claim{font-size:clamp(1.1rem,2vw,1.6rem);max-width:420px;margin:0}
+.hero__claim em{font-family:var(--serif);font-size:1.35em}
+.scroll-cue{text-decoration:none;align-self:flex-start;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;display:flex;gap:18px;align-items:center}
+.scroll-cue span{font-size:1.4rem}
+.section{padding:clamp(88px,12vw,170px) clamp(22px,7vw,110px)}
+.intro{text-align:center;max-width:1100px;margin:auto}
+.intro h2,.party h2,.rsvp h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,5.5vw,5.3rem);line-height:1.03;letter-spacing:-.035em;margin:0 auto 32px}
+.intro h2 em,.party h2 em{font-style:italic}
+.lead{font-size:clamp(1rem,1.5vw,1.25rem);color:var(--muted);max-width:690px;margin:0 auto}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(42px,8vw,120px);max-width:1500px;margin:auto;align-items:start}
+.story__visual{position:sticky;top:30px}
+.story__visual img{width:100%;height:min(72vh,760px);object-fit:cover;object-position:center;border-radius:2px}
+.stamp{display:inline-block;margin-top:16px;font-size:.65rem;letter-spacing:.18em;line-height:1.5;color:var(--muted)}
+.story__copy h2{font-family:var(--serif);font-size:clamp(2.4rem,4.5vw,4.8rem);font-weight:400;line-height:1.02;letter-spacing:-.04em;margin:0 0 70px}
+.chapter{border-top:1px solid var(--stone);padding:28px 0 34px}
+.chapter__year{font-size:.68rem;letter-spacing:.2em;color:var(--accent);font-weight:600}
+.chapter h3{font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,2.15rem);font-weight:400;margin:10px 0 8px;line-height:1.1}
+.chapter p{color:var(--muted);max-width:560px;margin:0}
+.date{background:#e3ddd2;text-align:center}
+.date h2{font-family:var(--serif);font-size:clamp(4rem,12vw,10rem);font-weight:400;line-height:.9;letter-spacing:-.055em;margin:0}
+.date__big{font-size:clamp(1rem,1.8vw,1.5rem);letter-spacing:.2em;margin:24px 0 90px}
+.route{max-width:900px;margin:auto;display:grid;grid-template-columns:1fr 90px 1fr;align-items:center;text-align:left}
+.route div:not(.route__line){display:grid;gap:5px}
+.route span{font-size:.65rem;letter-spacing:.15em;color:var(--accent)}
+.route strong{font-family:var(--serif);font-size:1.6rem;font-weight:400}
+.route small{color:var(--muted)}
+.route__line{height:1px;background:#aaa295;position:relative}
+.route__line:after{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.countdown{text-align:center}
+.countdown h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.5rem,6vw,5.5rem);margin:0 0 60px}
+.countdown__grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:1000px;margin:auto;border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+.countdown__grid div{padding:32px 10px;border-right:1px solid var(--stone)}
+.countdown__grid div:last-child{border-right:0}
+.countdown__grid strong{font-family:var(--serif);font-size:clamp(2.5rem,5vw,5rem);font-weight:400;display:block;line-height:1}
+.countdown__grid span{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.party{background:var(--ink);color:var(--white);text-align:center}
+.party__inner{max-width:850px;margin:auto}
+.party .eyebrow{color:#b8bdac}
+.party h2{margin-bottom:28px}
+.party p:last-child{max-width:600px;margin:auto;color:#c9cbc5}
+.rsvp{text-align:center;max-width:1000px;margin:auto}
+.rsvp h2{margin-bottom:24px}
+.rsvp__buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:42px}
+.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--ink);padding:14px 24px;border-radius:100px;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:600;transition:.25s ease}
+.button--dark{background:var(--ink);color:var(--white)}
+.button:hover{transform:translateY(-2px)}
+.note{font-size:.72rem;color:var(--muted);margin-top:20px}
+.footer{padding:70px 22px 90px;text-align:center;border-top:1px solid var(--stone)}
+.footer p{font-family:var(--serif);font-size:2rem;margin:0}
+.footer p span{font-style:italic}
+.footer small{color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-size:.62rem}
+
+@media (max-width:800px){
+  .hero{min-height:620px}
+  .hero__image{object-position:56% center}
+  .story{grid-template-columns:1fr}
+  .story__visual{position:relative;top:auto}
+  .story__visual img{height:70svh;max-height:680px}
+  .story__copy h2{margin-bottom:42px}
+  .route{grid-template-columns:1fr;gap:28px;text-align:center}
+  .route__line{width:1px;height:55px;margin:auto}
+  .route__line:after{left:50%;top:50%}
+  .countdown__grid{grid-template-columns:repeat(2,1fr)}
+  .countdown__grid div:nth-child(2){border-right:0}
+  .countdown__grid div:nth-child(-n+2){border-bottom:1px solid var(--stone)}
+}
