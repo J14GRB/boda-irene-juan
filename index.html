@@ -3,119 +3,179 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f0e8">
+  <meta name="theme-color" content="#f5f0e8">
+  <meta name="description" content="Irene & Juan — 15 de mayo de 2027. Nos casamos en Segovia.">
   <title>Irene & Juan · 15.05.2027</title>
-  <meta name="description" content="Irene y Juan se casan en Segovia el 15 de mayo de 2027.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <img class="hero__image" src="assets/foto-01.jpg" alt="Irene y Juan juntos">
-    <div class="hero__veil"></div>
-    <div class="hero__content">
-      <p class="eyebrow">SEGOVIA · 15 MAYO 2027</p>
-      <h1>Irene <span>&</span> Juan</h1>
-      <p class="hero__claim">Nos casamos.<br><em>Y queremos celebrarlo contigo.</em></p>
-      <a class="scroll-cue" href="#historia">Descubrir <span>↓</span></a>
-    </div>
+  <header class="topbar">
+    <a class="wordmark" href="#inicio">I&nbsp;&amp;&nbsp;J</a>
+    <nav aria-label="Navegación principal">
+      <a href="#historia">Historia</a>
+      <a href="#dia">El día</a>
+      <a href="#fiesta">Fiesta</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
   </header>
 
   <main>
-    <section class="intro section">
-      <p class="eyebrow">UNA PEQUEÑA HISTORIA</p>
-      <h2>A veces el destino no es llegar a ningún sitio.<br><em>Es coincidir en el mismo tren.</em></h2>
-      <p class="lead">Lo que empezó en un examen práctico de conducir terminó convirtiéndose en una vida compartida, muchos viajes y unas cuantas excusas para coger el mismo AVE.</p>
-    </section>
-
-    <section id="historia" class="story section">
-      <div class="story__visual">
-        <img src="assets/foto-02.jpg" alt="Irene y Juan de viaje">
-        <span class="stamp">ARCHIVO<br>IRENE + JUAN</span>
+    <section class="hero" id="inicio">
+      <div class="hero-media">
+        <img src="assets/1. Santorini portada.jpeg" alt="Irene y Juan en Santorini" fetchpriority="high">
       </div>
-      <div class="story__copy">
-        <p class="eyebrow">2014 — 2027</p>
-        <h2>Cómo llegamos hasta aquí</h2>
-
-        <article class="chapter">
-          <span class="chapter__year">09 · 2014</span>
-          <h3>Todo empezó con un carnet de conducir.</h3>
-          <p>Nos conocimos haciendo el examen práctico. No hubo música de película. Solo dos personas intentando que el examinador no les suspendiera.</p>
-        </article>
-
-        <article class="chapter">
-          <span class="chapter__year">2014 — 2017</span>
-          <h3>Luego llegaron los trenes.</h3>
-          <p>Íbamos y volvíamos a Madrid en AVE para ir a la Universidad. Poco a poco empezamos a conocernos de verdad.</p>
-        </article>
-
-        <article class="chapter">
-          <span class="chapter__year">2017</span>
-          <h3>Entonces empezaron las “casualidades”.</h3>
-          <p>“¿A qué hora coges el tren?” se convirtió en una pregunta bastante frecuente. Qué cosas.</p>
-        </article>
-
-        <article class="chapter">
-          <span class="chapter__year">12 · 2017</span>
-          <h3>Sevilla.</h3>
-          <p>Nuestro primer viaje juntos. A estas alturas ya había pocas dudas. Decidimos comprobarlo viajando.</p>
-        </article>
-
-        <article class="chapter">
-          <span class="chapter__year">12 · 2022</span>
-          <h3>Nos mudamos juntos.</h3>
-          <p>Desde entonces compartimos casa, viajes, planes, risas y discusiones importantísimas sobre quién tiene razón. La investigación continúa.</p>
-        </article>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow light">Segovia · 15 de mayo de 2027</p>
+        <h1>Irene <span>&amp;</span> Juan</h1>
+        <p class="hero-line">Nos casamos en Segovia.</p>
+        <a class="scroll-cue" href="#intro" aria-label="Continuar">↓</a>
       </div>
     </section>
 
-    <section class="date section">
-      <p class="eyebrow">PRÓXIMA PARADA</p>
-      <h2>Segovia</h2>
-      <p class="date__big">15 · 05 · 2027</p>
-      <div class="route">
-        <div><span>01</span><strong>Ceremonia</strong><small>Santuario de la Virgen de la Fuencisla</small></div>
-        <div class="route__line"></div>
-        <div><span>02</span><strong>Fiesta</strong><small>Zibá José María Eventos</small></div>
+    <section class="intro section-pad" id="intro">
+      <p class="kicker">Pero espera.</p>
+      <h2>Aunque nuestra historia<br><em>empezó mucho antes.</em></h2>
+      <p class="lead">Septiembre de 2014. Un examen práctico. Dos personas intentando sacarse el carnet de conducir.</p>
+      <p>Lo que ninguno de los dos sabía es que aquel día también estaban empezando otra cosa.</p>
+    </section>
+
+    <section class="story section-pad" id="historia">
+      <div class="story-grid">
+        <div class="story-copy">
+          <p class="kicker">Madrid · ida y vuelta</p>
+          <h2>Empezamos a conocernos entre trenes.</h2>
+          <p>Después llegaron los viajes en AVE para ir y volver de la Universidad. Hablábamos cada vez más y empezamos a preguntarnos a qué hora cogeríamos el tren para, casualmente, coincidir.</p>
+          <p>Alguna clase se perdió por el camino. No diremos cuántas. La estadística no nos favorece.</p>
+        </div>
+        <figure class="story-photo">
+          <img src="assets/2017 LG.jpeg" alt="Irene y Juan juntos durante sus primeros años">
+        </figure>
+      </div>
+
+      <div class="story-break">
+        <p class="kicker">2017</p>
+        <h2>Un día dejamos de buscar excusas para coincidir.</h2>
+        <p>Y empezamos a buscarnos a nosotros.</p>
+      </div>
+
+      <div class="editorial-grid">
+        <figure class="photo-large">
+          <img src="assets/2. Mirada rio.jpeg" alt="Irene y Juan juntos">
+        </figure>
+        <div class="editorial-copy">
+          <p class="kicker">Diciembre de 2017</p>
+          <h3>Primera escapada juntos: Sevilla.</h3>
+          <p>Después vinieron más viajes, más planes, más historias y, con el tiempo, una vida entera que construir juntos.</p>
+        </div>
+      </div>
+
+      <div class="quote">
+        <span>“</span>
+        <p>Nos ha llevado unos cuantos años llegar hasta aquí. Pero, oye, tampoco teníamos prisa.</p>
+      </div>
+
+      <div class="duo">
+        <figure>
+          <img src="assets/Globo.jpeg" alt="Irene y Juan de viaje">
+          <figcaption>Hemos viajado bastante.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/Puesta gafas.jpeg" alt="Irene y Juan en un viaje">
+          <figcaption>Y hemos desarrollado técnicas avanzadas para salir bien en las fotos.</figcaption>
+        </figure>
+      </div>
+
+      <div class="living">
+        <div>
+          <p class="kicker">Diciembre de 2022</p>
+          <h2>Nos fuimos a vivir juntos.</h2>
+        </div>
+        <p>Y desde entonces hemos descubierto que querer a alguien también es decidir quién ha dejado la luz encendida, discutir por la temperatura del aire acondicionado y seguir eligiéndose al final del día.</p>
       </div>
     </section>
 
-    <section class="countdown section">
-      <p class="eyebrow">CUENTA ATRÁS</p>
-      <h2>Nos queda un poquito.</h2>
-      <div id="countdown" class="countdown__grid" aria-live="polite">
-        <div><strong>—</strong><span>días</span></div>
-        <div><strong>—</strong><span>horas</span></div>
-        <div><strong>—</strong><span>minutos</span></div>
-        <div><strong>—</strong><span>segundos</span></div>
+    <section class="humor">
+      <div class="humor-inner">
+        <p class="kicker light">Una relación basada en valores.</p>
+        <h2>Amor.<br>Confianza.<br>Y hacer bastante el idiota.</h2>
+        <div class="humor-photo">
+          <img src="assets/Salto Florencia.jpeg" alt="Irene y Juan haciendo una foto divertida en Florencia">
+        </div>
+        <p class="humor-caption">Porque una boda muy elegante no significa que tengamos que comportarnos como adultos.</p>
       </div>
     </section>
 
-    <section class="party section">
-      <div class="party__inner">
-        <p class="eyebrow">MANUAL DE SUPERVIVENCIA · 15.05.27</p>
-        <h2>Habrá comida.<br>Habrá bebida.<br><em>Alguien hará el ridículo.</em></h2>
-        <p>Probablemente nosotros. Pero hemos decidido que, después de tantos años, ya no tiene sentido intentar evitarlo.</p>
+    <section class="day section-pad" id="dia">
+      <div class="centered">
+        <p class="kicker">El gran día</p>
+        <h2>15 · 05 · 2027</h2>
+        <p class="lead">Tenemos una cita en Segovia.</p>
+      </div>
+
+      <div class="venue-grid">
+        <article class="venue">
+          <span class="venue-number">01</span>
+          <p class="kicker">Ceremonia</p>
+          <h3>Santuario de la<br>Virgen de la Fuencisla</h3>
+          <p>El lugar donde diremos el “sí, quiero”.</p>
+        </article>
+        <article class="venue">
+          <span class="venue-number">02</span>
+          <p class="kicker">Celebración</p>
+          <h3>Zibá José María<br>Eventos</h3>
+          <p>Donde celebraremos que, efectivamente, lo hemos conseguido.</p>
+        </article>
+      </div>
+
+      <div class="photo-strip">
+        <img src="assets/Santorini puesta.jpeg" alt="Irene y Juan disfrutando de un viaje">
+        <img src="assets/Puesta Disney.jpeg" alt="Irene y Juan sonriendo">
+        <img src="assets/Sombra beso playa.jpeg" alt="Sombra de Irene y Juan besándose en la playa">
       </div>
     </section>
 
-    <section class="rsvp section">
-      <p class="eyebrow">Y AHORA, LO IMPORTANTE</p>
-      <h2>¿Coincidimos?</h2>
-      <p class="lead">Después de tantos años consiguiendo coincidir en trenes, nos gustaría saber si vais a coincidir con nosotros el 15 de mayo.</p>
-      <div class="rsvp__buttons">
-        <a href="mailto:VUESTROEMAIL@EJEMPLO.COM?subject=RSVP%20Irene%20%26%20Juan" class="button button--dark">Sí, allí estaremos</a>
-        <a href="mailto:VUESTROEMAIL@EJEMPLO.COM?subject=RSVP%20Irene%20%26%20Juan" class="button">No puedo 😭</a>
+    <section class="party section-pad" id="fiesta">
+      <div class="party-card">
+        <p class="kicker">Después de la ceremonia</p>
+        <h2>Habrá comida.<br>Habrá música.<br>Habrá fiesta.</h2>
+        <p>Y, conociéndonos, probablemente habrá alguna decisión de la que nadie quiera hablar al día siguiente.</p>
+        <div class="party-rule"></div>
+        <p class="small-note">Se recomienda venir con hambre, ganas de bailar y cero expectativas de acostarse pronto.</p>
       </div>
-      <p class="note">El formulario de confirmación definitivo lo conectaremos en la siguiente versión.</p>
+    </section>
+
+    <section class="rsvp section-pad" id="rsvp">
+      <div class="rsvp-inner">
+        <p class="kicker">Ahora te toca a ti</p>
+        <h2>¿Vienes a celebrar con nosotros?</h2>
+        <p>La confirmación de asistencia será el siguiente paso. Por ahora, guarda la fecha:</p>
+        <div class="date-lockup">
+          <strong>15</strong>
+          <span>MAYO<br>2027</span>
+        </div>
+        <button class="button" type="button" disabled>RSVP · Próximamente</button>
+        <p class="fineprint">Activaremos el formulario cuando tengamos todos los detalles cerrados.</p>
+      </div>
+    </section>
+
+    <section class="closing">
+      <img src="assets/WhatsApp Image 2026-08-20 at 19.24.20.jpeg" alt="Irene y Juan besándose">
+      <div class="closing-overlay"></div>
+      <div class="closing-content">
+        <p class="eyebrow light">Y después de todo...</p>
+        <h2>Nos casamos.</h2>
+        <p>Irene &amp; Juan · Segovia · 15.05.2027</p>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Irene <span>&</span> Juan</p>
-    <small>Segovia · 15.05.2027</small>
+    <span>Irene &amp; Juan</span>
+    <span>15.05.2027</span>
   </footer>
 
   <script src="script.js"></script>
