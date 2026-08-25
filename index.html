@@ -3,162 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f5f0e8">
-<meta name="description" content="Irene & Juan — 15 de mayo de 2027. Nos casamos en Segovia.">
 <title>Irene & Juan · 15.05.2027</title>
+<meta name="description" content="Irene & Juan · Segovia · 15 de mayo de 2027">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<style>
+:root{--paper:#f5f0e8;--ink:#27231f;--muted:#716960;--line:#d8d0c5;--dark:#181715;--white:#fffaf3;--serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 var(--sans)}img{display:block;width:100%;height:100%;object-fit:cover}a{color:inherit;text-decoration:none}
+.topbar{position:fixed;z-index:10;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:18px 28px;color:var(--white);transition:.3s}.topbar.scrolled{color:var(--ink);background:#f5f0e8ee;backdrop-filter:blur(10px)}.wordmark{font:500 27px var(--serif)}nav{display:flex;gap:22px;font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+.hero{height:100svh;min-height:650px;position:relative;display:grid;place-items:center;overflow:hidden;background:#222}.hero>img{position:absolute;inset:0}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(#0002,#0008)}.hero-content{position:relative;z-index:1;text-align:center;color:var(--white);padding:80px 20px}.eyebrow,.kicker{font-size:11px;letter-spacing:.19em;text-transform:uppercase}.hero h1{font:500 clamp(78px,14vw,170px)/.82 var(--serif);letter-spacing:-.055em;margin:15px 0}.hero h1 span{font-style:italic}.hero-line{font:400 clamp(24px,3.2vw,40px)/1.1 var(--serif);margin:0}.scroll{display:grid;place-items:center;width:42px;height:42px;border:1px solid #fff8;border-radius:50%;margin:65px auto 0;font-size:20px}
+section{padding:clamp(90px,12vw,160px) 6vw}.intro{max-width:930px;margin:auto;text-align:center}.intro h2,.story h2,.party h2,.rsvp h2{font:500 clamp(52px,7vw,94px)/.96 var(--serif);letter-spacing:-.025em;margin:0 0 28px}.intro h2 em{font-style:italic}.lead{font:400 clamp(24px,3vw,34px)/1.15 var(--serif)}.intro p:not(.kicker){max-width:660px;margin:20px auto}
+.story{max-width:1180px;margin:auto}.story-grid,.editorial,..living{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,110px);align-items:center}.story-photo{height:min(68vw,690px);margin:0}.story-photo img{object-position:center}.story-copy{max-width:560px}.story-break{text-align:center;padding:clamp(120px,18vw,210px) 3vw}.story-break h2{font:500 clamp(50px,7vw,88px)/.96 var(--serif);max-width:900px;margin:0 auto 20px}.story-break p:last-child{font:28px var(--serif)}.editorial{align-items:end}.editorial-photo{height:min(65vw,730px);margin:0}.editorial-copy{padding-bottom:6vw}.editorial-copy h3{font:500 clamp(40px,5vw,62px)/.96 var(--serif);margin:0 0 20px}.quote{text-align:center;max-width:800px;margin:clamp(110px,16vw,190px) auto}.quote-mark{font:120px/0 var(--serif)}.quote p{font:clamp(30px,4vw,48px)/1.05 var(--serif);margin:20px 0 0}.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}.duo figure{margin:0}.duo figure:nth-child(2){margin-top:10vw}.duo img{height:min(55vw,560px)}figcaption{font:23px var(--serif);margin-top:12px}.living{padding-top:clamp(130px,18vw,210px);align-items:end}.living h2{margin:0}.living p{max-width:520px;font-size:18px}
+.humor{background:var(--dark);color:var(--white);text-align:center}.humor h2{font:500 clamp(58px,8vw,108px)/.9 var(--serif);margin:0}.humor-photo{height:min(75vw,680px);max-width:760px;margin:60px auto 30px}.humor-caption{font:25px var(--serif);max-width:650px;margin:auto}
+.centered{text-align:center;max-width:800px;margin:auto}.centered h2{font:500 clamp(72px,10vw,130px)/.85 var(--serif);margin:0}.venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1040px;margin:80px auto}.venue{background:#eee7dc;padding:38px 38px 50px}.venue-media{height:310px;margin-bottom:28px;background:#ddd5c9;overflow:hidden}.venue-media img{object-fit:contain;padding:0}.venue .kicker{margin-bottom:8px}.venue h3{font:500 clamp(36px,4vw,55px)/.95 var(--serif);margin:0 0 16px}.venue p:last-child{max-width:380px}.photo-strip{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:14px}.photo-strip img{height:min(55vw,500px)}
+.party{background:#e7dfd2;text-align:center}.party-card{max-width:880px;margin:auto}.party h2{font-size:clamp(60px,8vw,110px)}.party-card>p:not(.kicker){font:28px/1.25 var(--serif);max-width:700px;margin:auto}.rule{height:1px;background:var(--line);max-width:280px;margin:55px auto 28px}.small{font-size:12px!important;letter-spacing:.1em;text-transform:uppercase;line-height:1.5!important}
+.rsvp{text-align:center}.rsvp-inner{max-width:760px;margin:auto}.rsvp h2{font-size:clamp(58px,7vw,96px)}.date{display:flex;justify-content:center;align-items:center;gap:16px;margin:50px 0;font-family:var(--serif)}.date strong{font-size:100px;line-height:.8;font-weight:500}.date span{font-size:22px;line-height:1.05;letter-spacing:.08em;text-align:left}.button{border:1px solid var(--ink);background:transparent;padding:15px 24px;letter-spacing:.1em;text-transform:uppercase;font-size:11px}
+.closing{height:100svh;min-height:620px;position:relative;background:#222}.closing img{position:absolute;inset:0}.closing:after{content:"";position:absolute;inset:0;background:linear-gradient(#0001,#0009)}.closing-content{position:absolute;z-index:1;left:7vw;bottom:9vh;color:var(--white)}.closing-content h2{font:500 clamp(80px,13vw,170px)/.8 var(--serif);margin:0}.closing-content p:last-child{font:25px var(--serif)}footer{display:flex;justify-content:space-between;padding:24px 28px;font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+@media(max-width:800px){.topbar{padding:15px 18px}nav{gap:12px;font-size:9px}nav a:first-child{display:none}.story-grid,.editorial,.living,.venue-grid{grid-template-columns:1fr}.story-photo{height:110vw;max-height:680px}.editorial-copy{padding-top:25px}.duo{grid-template-columns:1fr}.duo figure:nth-child(2){margin-top:10px}.duo img{height:90vw}.venue-media{height:260px}.photo-strip{grid-template-columns:1fr 1fr}.photo-strip img{height:62vw}.photo-strip img:last-child{grid-column:1/-1;height:80vw}.humor-photo{height:105vw}}
+</style>
 </head>
 <body>
-<header class="topbar">
-  <a class="wordmark" href="#inicio">I&nbsp;&amp;&nbsp;J</a>
-  <nav aria-label="Navegación principal">
-    <a href="#historia">Historia</a><a href="#dia">El día</a><a href="#fiesta">Fiesta</a><a href="#rsvp">RSVP</a>
-  </nav>
-</header>
+<header class="topbar" id="topbar"><a class="wordmark" href="#inicio">I&nbsp;&amp;&nbsp;J</a><nav><a href="#historia">Historia</a><a href="#dia">El día</a><a href="#fiesta">Fiesta</a><a href="#rsvp">RSVP</a></nav></header>
 
 <main>
 <section class="hero" id="inicio">
-  <div class="hero-media"><img src="assets/1. Santorini portada.jpeg" alt="Irene y Juan en Santorini" fetchpriority="high"></div>
-  <div class="hero-shade"></div>
-  <div class="hero-content">
-    <p class="eyebrow light">Segovia · 15 de mayo de 2027</p>
-    <h1>Irene <span>&amp;</span> Juan</h1>
-    <p class="hero-line">Nos casamos en Segovia.</p>
-    <a class="scroll-cue" href="#intro" aria-label="Continuar">↓</a>
-  </div>
+<img src="assets/1. Santorini portada.jpeg" alt="Irene y Juan en Santorini">
+<div class="hero-content"><div class="eyebrow">Segovia · 15 de mayo de 2027</div><h1>Irene <span>&amp;</span> Juan</h1><p class="hero-line">Nos casamos en Segovia.</p><a class="scroll" href="#intro">↓</a></div>
 </section>
 
-<section class="intro section-pad" id="intro">
-  <p class="kicker">Pero espera.</p>
-  <h2>Aunque nuestra historia<br><em>empezó mucho antes.</em></h2>
-  <p class="lead">Septiembre de 2014. Un examen práctico. Dos personas intentando sacarse el carnet de conducir.</p>
-  <p>Lo que ninguno de los dos sabía al irse cada uno por su camino es que se acabarían uniendo de nuevo... y para siempre.</p>
+<section class="intro" id="intro"><p class="kicker">Pero espera.</p><h2>Aunque nuestra historia<br><em>empezó mucho antes.</em></h2><p class="lead">Septiembre de 2014. Un examen práctico. Dos personas intentando sacarse el carnet de conducir.</p><p>Lo que ninguno de los dos sabía al irse cada uno por su camino es que se acabarían uniendo de nuevo... y para siempre.</p></section>
+
+<section class="story" id="historia">
+<div class="story-grid"><div class="story-copy"><p class="kicker">Madrid · ida y vuelta</p><h2>Empezamos a conocernos entre trenes.</h2><p>Después llegaron los viajes en AVE para ir y volver de la Universidad. Hablábamos cada vez más y empezamos a preguntarnos a qué hora cogeríamos el tren para, casualmente, coincidir.</p><p>Alguna clase se perdió por el camino. No diremos cuántas. La estadística no nos favorece.</p></div><figure class="story-photo"><img src="assets/2017 LG.jpeg" alt="Irene y Juan juntos"></figure></div>
+
+<div class="story-break"><p class="kicker">2017</p><h2>Un día dejamos de buscar excusas para coincidir.</h2><p>Y empezamos a buscarnos a nosotros.</p></div>
+
+<div class="editorial">
+<figure class="editorial-photo"><img src="assets/primera-escapada.jpg" alt="Irene y Juan en su primera escapada juntos"></figure>
+<div class="editorial-copy"><p class="kicker">Diciembre de 2017</p><h3>Primera escapada juntos.</h3><p>Sevilla fue nuestro primer viaje juntos. Después vinieron más viajes, más planes, más historias y, con el tiempo, una vida entera que construir juntos.</p></div>
+</div>
+
+<div class="quote"><div class="quote-mark">“</div><p>Nos ha llevado unos cuantos años llegar hasta aquí. Pero, oye, tampoco teníamos prisa.</p></div>
+
+<div class="duo"><figure><img src="assets/Globo.jpeg" alt="Irene y Juan de viaje"><figcaption>Hemos viajado bastante.</figcaption></figure><figure><img src="assets/Puesta gafas.jpeg" alt="Irene y Juan en un viaje"><figcaption>Y hemos desarrollado técnicas avanzadas para salir bien en las fotos.</figcaption></figure></div>
+
+<div class="living"><div><p class="kicker">Diciembre de 2022</p><h2>Empezamos a vivir juntos.</h2></div><div><p>Y desde entonces hemos descubierto que querer a alguien también es decidir quién ha dejado la luz encendida, discutir por la temperatura del aire acondicionado y seguir eligiéndose al final del día.</p><figure class="editorial-photo" style="height:min(55vw,540px);margin-top:30px"><img src="assets/vivir-juntos.jpg" alt="Irene y Juan viviendo juntos"></figure></div></div>
 </section>
 
-<section class="story section-pad" id="historia">
-  <div class="story-grid">
-    <div class="story-copy">
-      <p class="kicker">Madrid · ida y vuelta</p>
-      <h2>Empezamos a conocernos entre trenes.</h2>
-      <p>Después llegaron los viajes en AVE para ir y volver de la Universidad. Hablábamos cada vez más y empezamos a preguntarnos a qué hora cogeríamos el tren para, casualmente, coincidir.</p>
-      <p>Alguna clase se perdió por el camino. No diremos cuántas. La estadística no nos favorece.</p>
-    </div>
-    <figure class="story-photo story-photo-2017">
-      <img src="assets/2017 LG.jpeg" alt="Irene y Juan juntos durante sus primeros años">
-    </figure>
-  </div>
+<section class="humor" id="humor"><p class="kicker" style="color:#fff9">Una relación basada en valores.</p><h2>Amor.<br>Confianza.<br>Y hacer bastante el idiota.</h2><div class="humor-photo"><img src="assets/Salto Florencia.jpeg" alt="Irene y Juan haciendo una foto divertida"></div><p class="humor-caption">Porque una boda muy elegante no significa que tengamos que comportarnos como adultos.</p></section>
 
-  <div class="story-break">
-    <p class="kicker">2017</p>
-    <h2>Un día dejamos de buscar excusas para coincidir.</h2>
-    <p>Y empezamos a buscarnos a nosotros.</p>
-  </div>
-
-  <div class="editorial-grid">
-    <figure class="photo-large">
-      <img src="assets/2. Mirada rio.jpeg" alt="Irene y Juan juntos">
-    </figure>
-    <div class="editorial-copy">
-      <p class="kicker">Diciembre de 2017</p>
-      <h3>Primera escapada juntos.</h3>
-      <p>Sevilla fue nuestro primer viaje juntos. Después vinieron más viajes, más planes, más historias y, con el tiempo, una vida entera que construir juntos.</p>
-    </div>
-  </div>
-
-  <div class="quote"><span>“</span><p>Nos ha llevado unos cuantos años llegar hasta aquí. Pero, oye, tampoco teníamos prisa.</p></div>
-
-  <div class="duo">
-    <figure><img src="assets/Globo.jpeg" alt="Irene y Juan de viaje"><figcaption>Hemos viajado bastante.</figcaption></figure>
-    <figure><img src="assets/Puesta gafas.jpeg" alt="Irene y Juan en un viaje"><figcaption>Y hemos desarrollado técnicas avanzadas para salir bien en las fotos.</figcaption></figure>
-  </div>
-
-  <div class="living">
-    <div><p class="kicker">Diciembre de 2022</p><h2>Nos fuimos a vivir juntos.</h2></div>
-    <p>Y desde entonces hemos descubierto que querer a alguien también es decidir quién ha dejado la luz encendida, discutir por la temperatura del aire acondicionado y seguir eligiéndose al final del día.</p>
-  </div>
+<section id="dia"><div class="centered"><p class="kicker">El gran día</p><h2>15 · 05 · 2027</h2><p class="lead">Tenemos una cita en Segovia.</p></div>
+<div class="venue-grid">
+<article class="venue"><div class="venue-media"><img src="assets/santuario-fuencisla-jpg.png" alt="Santuario de la Virgen de la Fuencisla"></div><p class="kicker">Ceremonia · 12:30</p><h3>Santuario de la<br>Virgen de la Fuencisla</h3><p>El lugar donde diremos el “sí, quiero”.</p></article>
+<article class="venue"><div class="venue-media"><img src="assets/ziba.jpg" alt="Zibá José María Eventos"></div><p class="kicker">Celebración · Después</p><h3>Zibá José María<br>Eventos</h3><p>Donde celebraremos que, efectivamente, lo hemos conseguido.</p></article>
+</div>
+<div class="photo-strip"><img src="assets/Santorini puesta.jpeg" alt="Irene y Juan disfrutando de un viaje"><img src="assets/Puesta Disney.jpeg" alt="Irene y Juan sonriendo"><img src="assets/5. Sombra beso playa.jpeg" alt="Silueta de Irene y Juan besándose en la playa"></div>
 </section>
 
-<section class="humor">
-  <div class="humor-inner">
-    <p class="kicker light">Una relación basada en valores.</p>
-    <h2>Amor.<br>Confianza.<br>Y hacer bastante el idiota.</h2>
-    <div class="humor-photo"><img src="assets/Salto Florencia.jpeg" alt="Irene y Juan haciendo una foto divertida en Florencia"></div>
-    <p class="humor-caption">Porque una boda muy elegante no significa que tengamos que comportarnos como adultos.</p>
-  </div>
-</section>
+<section class="party" id="fiesta"><div class="party-card"><p class="kicker">Después de la ceremonia</p><h2>Habrá comida.<br>Habrá música.<br>Habrá fiesta.</h2><p>Y, conociéndonos, probablemente habrá alguna decisión de la que nadie quiera hablar al día siguiente.</p><div class="rule"></div><p class="small">Se recomienda venir con hambre, ganas de bailar y cero expectativas de acostarse pronto.</p></div></section>
 
-<section class="day section-pad" id="dia">
-  <div class="centered">
-    <p class="kicker">El gran día</p>
-    <h2>15 · 05 · 2027</h2>
-    <p class="lead">Tenemos una cita en Segovia.</p>
-  </div>
+<section class="rsvp" id="rsvp"><div class="rsvp-inner"><p class="kicker">Ahora te toca a ti</p><h2>¿Vienes a celebrar con nosotros?</h2><p>La confirmación de asistencia será el siguiente paso. Por ahora, guarda la fecha:</p><div class="date"><strong>15</strong><span>MAYO<br>2027</span></div><button class="button" disabled>RSVP · Próximamente</button><p style="font-size:12px;color:var(--muted)">Activaremos el formulario cuando tengamos todos los detalles cerrados.</p></div></section>
 
-  <div class="venue-grid">
-    <article class="venue">
-      <div class="venue-art church-art" aria-label="Ilustración del Santuario de la Virgen de la Fuencisla">
-        <svg viewBox="0 0 420 220" role="img" aria-hidden="true">
-          <path class="sketch" d="M45 178 H375 M75 178 V115 L125 83 L175 115 V178 M105 178 V132 H145 V178 M190 178 V104 L210 87 L230 104 V178 M260 178 V116 L315 78 L355 116 V178 M288 178 V130 H325 V178 M300 116 V88 M315 78 V57 M330 89 V116"/>
-          <path class="sketch" d="M188 104 Q210 62 232 104 M202 178 V142 Q210 130 218 142 V178 M112 83 L125 61 L138 83"/>
-        </svg>
-      </div>
-      <span class="venue-number">01</span>
-      <p class="kicker">Ceremonia · 12:30</p>
-      <h3>Santuario de la<br>Virgen de la Fuencisla</h3>
-      <p>El lugar donde diremos el “sí, quiero”.</p>
-    </article>
-
-    <article class="venue">
-      <div class="venue-art ziba-art" aria-label="Ilustración de Zibá José María Eventos">
-        <svg viewBox="0 0 420 220" role="img" aria-hidden="true">
-          <path class="sketch" d="M55 178 H365 M78 178 V122 L145 82 L212 122 V178 M212 178 V104 L282 68 L350 104 V178 M108 178 V140 H142 V178 M245 178 V130 H278 V178 M296 178 V130 H330 V178"/>
-          <path class="sketch" d="M145 82 V54 M137 61 H153 M282 68 V45 M273 52 H291 M112 122 H178 M250 104 H314"/>
-        </svg>
-      </div>
-      <span class="venue-number">02</span>
-      <p class="kicker">Celebración · Después</p>
-      <h3>Zibá José María<br>Eventos</h3>
-      <p>Donde celebraremos que, efectivamente, lo hemos conseguido.</p>
-    </article>
-  </div>
-
-  <div class="photo-strip">
-    <img src="assets/Santorini puesta.jpeg" alt="Irene y Juan disfrutando de un viaje">
-    <img src="assets/Puesta Disney.jpeg" alt="Irene y Juan sonriendo">
-    <img src="assets/Sombra beso playa.jpeg" alt="Silueta de Irene y Juan besándose en la playa">
-  </div>
-</section>
-
-<section class="party section-pad" id="fiesta">
-  <div class="party-card">
-    <p class="kicker">Después de la ceremonia</p>
-    <h2>Habrá comida.<br>Habrá música.<br>Habrá fiesta.</h2>
-    <p>Y, conociéndonos, probablemente habrá alguna decisión de la que nadie quiera hablar al día siguiente.</p>
-    <div class="party-rule"></div>
-    <p class="small-note">Se recomienda venir con hambre, ganas de bailar y cero expectativas de acostarse pronto.</p>
-  </div>
-</section>
-
-<section class="rsvp section-pad" id="rsvp">
-  <div class="rsvp-inner">
-    <p class="kicker">Ahora te toca a ti</p><h2>¿Vienes a celebrar con nosotros?</h2>
-    <p>La confirmación de asistencia será el siguiente paso. Por ahora, guarda la fecha:</p>
-    <div class="date-lockup"><strong>15</strong><span>MAYO<br>2027</span></div>
-    <button class="button" type="button" disabled>RSVP · Próximamente</button>
-    <p class="fineprint">Activaremos el formulario cuando tengamos todos los detalles cerrados.</p>
-  </div>
-</section>
-
-<section class="closing">
-  <img src="assets/WhatsApp Image 2026-08-20 at 19.24.20.jpeg" alt="Irene y Juan besándose">
-  <div class="closing-overlay"></div>
-  <div class="closing-content"><p class="eyebrow light">Y después de todo...</p><h2>Nos casamos.</h2><p>Irene &amp; Juan · Segovia · 15.05.2027</p></div>
-</section>
+<section class="closing"><img src="assets/WhatsApp Image 2026-08-20 at 19.24.20.jpeg" alt="Irene y Juan besándose"><div class="closing-content"><p class="eyebrow">Y después de todo...</p><h2>Nos casamos.</h2><p>Irene &amp; Juan · Segovia · 15.05.2027</p></div></section>
 </main>
-<footer class="footer"><span>Irene &amp; Juan</span><span>15.05.2027</span></footer>
-<script src="script.js"></script>
+<footer><span>Irene &amp; Juan</span><span>15.05.2027</span></footer>
+<script>addEventListener('scroll',()=>document.getElementById('topbar').classList.toggle('scrolled',scrollY>innerHeight*.55),{passive:true});</script>
 </body>
 </html>
